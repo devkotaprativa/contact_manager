@@ -16,8 +16,8 @@ class Connection < User
 	end
 	def view
 		puts "Enter the contact to be viewed"
-  	@value = gets.chomp
-		rs = @con.query("SELECT * FROM addressbook WHERE first_name = '#{@value}'")
+  	value = gets.chomp
+		rs = @con.query("SELECT * FROM addressbook WHERE first_name = '#{value}'")
 		 puts rs.fetch_row.join("\s")
 	end
 
@@ -27,11 +27,16 @@ class Connection < User
 			puts rs.fetch_row.join("\s")
 		end
 	end	
+	def delete
+puts "Enter the contact to be deleted"
+  	value = gets.chomp
+  	rs = @con.query("DELETE FROM addressbook WHERE first_name = '#{value}'")
+	end
 end
 data = Connection.new
 data.open
 data.display
-data.insert
+# data.insert
 
 
 
