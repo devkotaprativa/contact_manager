@@ -8,7 +8,8 @@ class User
 		puts "\t\t 1. Add Contact"
 		puts "\t\t 2. View Contact"
 		puts "\t\t 3. Edit Contact"
-		puts "\t\t 4. Delete Contact"
+		puts "\t\t 4. Show All Contacts"
+		puts "\t\t 5. Delete Contact"
 		puts "Enter your choice"
 		choice = gets.chomp.to_i
 		case choice
@@ -16,10 +17,12 @@ class User
 			add
 			puts "Successfully created"
 		when 2
-			show
+			view
 		when 3 
 			edit
 		when 4
+			show
+		when 5
 			delete
 		end
 	end
