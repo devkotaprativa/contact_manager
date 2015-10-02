@@ -39,18 +39,18 @@ class User
 		
 	end
 	def add
-		print"enter your First name: "
+		print"enter First name: "
     @first_name = gets.chomp
     # @addressbook[:name]= @name
-    print"enter your last name: "
+    print"enter last name: "
     @last_name = gets.chomp
-    print"enter number: "
+    print"enter  phone number: "
     @num = gets.chomp
     # @addressbook[:number] = @num
-    print"enter email id::"
+    print"enter email id: "
     @email = gets.chomp
     # @addressbook[:email] = @email
-    print"enter skype Id::"
+    print"enter skype Id: "
     @skype_id= gets.chomp
     # @addressbook[:skype] = @skype_id
     insert
